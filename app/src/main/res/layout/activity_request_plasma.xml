@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgorund"
+    >
+
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:paddingBottom="20dp"
+            android:text="Fill The Details!"
+            android:textSize="25sp"
+
+            />
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Mobile" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/getMobile"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Location" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/getLocation"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Blood Group" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/bloodgroup"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Division" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+        <Button
+            android:textAllCaps="false"
+            android:text="Forgot Password"
+            android:id="@+id/postbtn"
+            android:background="@drawable/roundedbutton"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

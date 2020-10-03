@@ -1,0 +1,205 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:scrollbarStyle="outsideOverlay"
+    tools:context=".Signup">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/background2"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/image_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/plasmalogo"
+             />
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Name" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/input_fullName"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Gender" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="BloodGroup" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/bloodgroup"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Mobile" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/inputMobile"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Address" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/inputAddress"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Division" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Email" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/input_userEmail"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint="Password" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp"
+            android:hint=" Confirm Password" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/input_password_confirm"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                /></com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:text="Mark this to be a donor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="Sign Up"
+            android:background="@drawable/roundedbutton"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</ScrollView>

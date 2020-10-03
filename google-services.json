@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "354905708534",
+    "firebase_url": "https://plasma-5700f.firebaseio.com",
+    "project_id": "plasma-5700f",
+    "storage_bucket": "plasma-5700f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354905708534:android:2f63abdc4dccb4a23319d7",
+        "android_client_info": {
+          "package_name": "com.example.plasmadonator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354905708534-uc2knbd1kpcj6d98g947l7bvn8d2tsjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plasmadonator",
+            "certificate_hash": "cab3fa9968f5b1f308271d7bae2482532e4da584"
+          }
+        },
+        {
+          "client_id": "354905708534-t9ih3918jrm388a084c3udrc07jkeor5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUvb5NYyGcddvF_Oww-6-cAVL4YDQ0-p0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354905708534-t9ih3918jrm388a084c3udrc07jkeor5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

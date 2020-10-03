@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgorund"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/image"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plasmalogo"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:text="@string/app_name"
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="24sp"
+        android:id="@+id/txt2"
+        android:text="Donate Plasma, Save Life!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
