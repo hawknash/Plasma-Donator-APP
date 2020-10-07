@@ -99,7 +99,7 @@
 
         <Button
             android:textAllCaps="false"
-            android:text="Forgot Password"
+            android:text="Request Plasma"
             android:id="@+id/postbtn"
             android:background="@drawable/roundedbutton"
             android:layout_marginTop="20dp"

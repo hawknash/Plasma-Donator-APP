@@ -141,6 +141,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
             android:text="Update Profile"
+            android:padding="12dp"
             android:background="@drawable/roundedbutton"
             android:textAllCaps="false"
             android:textColor="@android:color/white" />

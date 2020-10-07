@@ -1,6 +1,7 @@
 package com.example.plasmadonator.ui.gallery;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,8 +20,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.plasmadonator.Dashboard;
 import com.example.plasmadonator.R;
 import com.example.plasmadonator.viewmodels.UserData;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -143,6 +148,85 @@ public class GalleryFragment extends Fragment {
         } else pd.dismiss();
 
 
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                final String Name = fullName.getText().toString();
+                final String Gender = gender.getText().toString();
+                final String Contact = contact.getText().toString();
+                final String BloodGroup = bloodgroup.getText().toString();
+                final String Address = address.getText().toString();
+                final String Division = division.getText().toString();
+                final String blood = bloodgroup.getText().toString();
+                final String div   = division.getText().toString();
+
+                try {
+
+                    if (Name.length() <= 2) {
+                        ShowError("Name");
+                        fullName.requestFocusFromTouch();
+                    } else if (Contact.length() < 11) {
+                        ShowError("Contact Number");
+                        contact.requestFocusFromTouch();
+                    } else if (Address.length() <= 2) {
+                        ShowError("Address");
+                        address.requestFocusFromTouch();
+                    } else {
+                        if (!isUpdate) {
+
+
+                        } else {
+
+                            String id = mAuth.getCurrentUser().getUid();
+                            db_ref.child(id).child("Name").setValue(Name);
+                            db_ref.child(id).child("Gender").setValue(Gender);
+                            db_ref.child(id).child("Contact").setValue(Contact);
+                            db_ref.child(id).child("BloodGroup").setValue(BloodGroup);
+                            db_ref.child(id).child("Address").setValue(Address);
+                            db_ref.child(id).child("Division").setValue(Division);
+
+                            if(isDonor.isChecked())
+                            {
+                                donor_ref.child(div).child(blood).child(id).child("UID").setValue(id).toString();
+                                donor_ref.child(div).child(blood).child(id).child("LastDonate").setValue("Don't donate yet!");
+                                donor_ref.child(div).child(blood).child(id).child("TotalDonate").setValue(0);
+                                donor_ref.child(div).child(blood).child(id).child("Name").setValue(Name);
+                                donor_ref.child(div).child(blood).child(id).child("Contact").setValue(Contact);
+                                donor_ref.child(div).child(blood).child(id).child("Address").setValue(Address);
+
+                            }
+                            else
+                            {
+
+                                donor_ref.child(div).child(blood).child(id).removeValue();
+
+                            }
+                            Toast.makeText(getActivity(), "Your account has been updated!", Toast.LENGTH_LONG)
+                                    .show();
+                            Intent intent = new Intent(getActivity(), Dashboard.class);
+                            startActivity(intent);
+
+                        }
+                        pd.dismiss();
+
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+
+
+
         return root;
+    }
+    private void ShowError(String error) {
+
+        Toast.makeText(getActivity(), "Please, Enter a valid "+error,
+                Toast.LENGTH_LONG).show();
     }
 }
