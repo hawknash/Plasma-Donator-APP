@@ -36,7 +36,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class GalleryFragment extends Fragment {
 
-    private EditText inputemail, inputpassword, retypePassword, fullName, address, contact,gender, bloodgroup, division;
+    private EditText  fullName, address, contact,gender, bloodgroup, division;
     private FirebaseAuth mAuth;
     private Button btnSignup;
     private ProgressDialog pd;

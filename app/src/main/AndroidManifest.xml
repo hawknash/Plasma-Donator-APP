@@ -17,7 +17,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestPlasma"></activity>
+        <activity android:name=".AboutUs" android:theme="@style/AppTheme.ActionBar.Transparent"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC2YXjGyqKg1J2DYPV1olsfiaXhsr_mp8o" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".ui.send.web" android:theme="@style/AppTheme.ActionBar.Transparent"/>
+        <activity android:name=".RequestPlasma" />
         <activity android:name=".forgotpassword" />
         <activity
             android:name=".Dashboard"

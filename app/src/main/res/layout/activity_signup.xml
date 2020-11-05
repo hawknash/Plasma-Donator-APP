@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:clipToPadding="false"
     android:fillViewport="true"
@@ -20,8 +21,8 @@
             android:layout_gravity="center_horizontal"
             android:id="@+id/image_logo"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_height="100dp"
+
             android:layout_marginBottom="40dp"
             android:background="@drawable/plasmalogo"
              />
@@ -30,6 +31,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="Name" >
@@ -46,6 +50,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="Gender" >
@@ -62,6 +69,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="BloodGroup" >
@@ -79,6 +89,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="Mobile" >
@@ -95,6 +108,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="Address" >
@@ -111,6 +127,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="Division" >
@@ -127,6 +146,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="Email" >
@@ -143,6 +165,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint="Password" >
@@ -151,7 +176,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
-
+                android:inputType="textPassword"
                 android:layout_height="wrap_content"
                 /></com.google.android.material.textfield.TextInputLayout>
 
@@ -159,6 +184,9 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="#7F53AC"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/custom2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="10dp"
             android:hint=" Confirm Password" >
@@ -167,7 +195,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:id="@+id/input_password_confirm"
                 android:layout_width="match_parent"
-
+                android:inputType="textPassword"
                 android:layout_height="wrap_content"
                 /></com.google.android.material.textfield.TextInputLayout>
 

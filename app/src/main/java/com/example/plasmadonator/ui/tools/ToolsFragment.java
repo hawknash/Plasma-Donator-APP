@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.plasmadonator.R;
 import com.example.plasmadonator.adapter.SearchDonorAdapter;
 import com.example.plasmadonator.viewmodels.DonorData;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -93,43 +94,50 @@ public class ToolsFragment extends Fragment {
                 donorItem = new ArrayList<>();
                 donorItem.clear();
                 sdadapter = new SearchDonorAdapter(donorItem);
-                recyclerView =  root.findViewById(R.id.showDonorList);
+                recyclerView = root.findViewById(R.id.showDonorList);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                 RecyclerView.LayoutManager searchdonor = new LinearLayoutManager(getContext());
                 recyclerView.setLayoutManager(searchdonor);
                 recyclerView.setItemAnimator(new DefaultItemAnimator());
                 recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
                 recyclerView.setAdapter(sdadapter);
-                Query qpath  = db_ref.child(division.getText().toString())
-                        .child(bloodgroup.getText().toString());
-                qpath.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists())
-                        {
-                            for(DataSnapshot singleitem : dataSnapshot.getChildren())
-                            {
-                                DonorData donorData = singleitem.getValue(DonorData.class);
-                                donorItem.add(donorData);
-                                sdadapter.notifyDataSetChanged();
+                if (division.getText().toString().length() > 0 && bloodgroup.getText().toString().length() > 0) {
+                    Query qpath = db_ref.child(division.getText().toString())
+                            .child(bloodgroup.getText().toString());
+                    qpath.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                for (DataSnapshot singleitem : dataSnapshot.getChildren()) {
+                                    DonorData donorData = singleitem.getValue(DonorData.class);
+                                    donorItem.add(donorData);
+                                    sdadapter.notifyDataSetChanged();
+                                }
+                            } else {
+
+                                Toast.makeText(getActivity(), "Database is empty now!",
+                                        Toast.LENGTH_LONG).show();
+
                             }
                         }
-                        else
-                        {
 
-                            Toast.makeText(getActivity(), "Database is empty now!",
-                                    Toast.LENGTH_LONG).show();
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            Log.d("User", databaseError.getMessage());
 
                         }
-                    }
+                    });
+                    pd.dismiss();
+                }
+                else{
+                    pd.dismiss();
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Log.d("User", databaseError.getMessage());
+                    Snackbar snackbar = Snackbar
+                            .make(v, "Please fill the fields!", Snackbar.LENGTH_LONG);
+                    snackbar.show();
 
-                    }
-                });
-                pd.dismiss();
+
+                }
             }
         });
 
